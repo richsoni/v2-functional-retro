@@ -1,35 +1,13 @@
 {
+  "extends": "../../config/typescript/shared_compiler_options.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "es6",
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "noEmit": true,
-
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "outDir": "build/dist",
-    "resolveJsonModule": true,
-    "rootDir": "src",
-    "sourceMap": true,
-    "strict": true,
-    "strictNullChecks": true,
+    "outDir": "./dist",
     "suppressImplicitAnyIndexErrors": true,
-    "jsx": "react",
     "baseUrl": "./src"
   },
+  "include": [ "src" ],
   "exclude": [
     "node_modules",
     "build"
