@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Component, ReactNode} from 'react';
+import styles from './styles.module.css';
 
 interface IProps {
   children: ReactNode | ReactNode[],
@@ -12,7 +13,7 @@ export default class List extends Component<IProps, {}> {
 
   public render(){
     if(React.Children.count(this.props.children) > 0){
-      return <div>
+      return <div className={styles.test} >
         {this.props.children}
       </div>
     }
