@@ -1,20 +1,16 @@
 import * as React from 'react';
 import {Component, ReactNode} from 'react';
 
-interface Props {
+interface IProps {
   children: ReactNode | ReactNode[],
 }
 
-interface State {}
-
-export default class List extends Component<Props, State> {
-  public static defaultProps: Partial<Props> = {
+export default class List extends Component<IProps, {}> {
+  public static defaultProps: Partial<IProps> = {
     children: []
   }
 
-  public state: State = {}
-
-  render(){
+  public render(){
     if(React.Children.count(this.props.children) > 0){
       return <div>
         {this.props.children}

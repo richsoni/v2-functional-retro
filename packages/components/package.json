@@ -8,8 +8,8 @@
     "test:watch": "jest --watch",
     "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts*'",
     "del-dist": "del-cli dist",
-    "prebuild": "yarn del-dist",
-    "build": "tsc && tree dist/",
+    "prebuild": "yarn lint && yarn del-dist",
+    "build": "tsc",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
