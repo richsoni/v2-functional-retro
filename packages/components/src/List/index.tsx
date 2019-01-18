@@ -18,7 +18,7 @@ export default class List extends Component<IProps, {}> {
     }
     else {
       return <div>
-        <i>There are no items in this list</i>
+        <i>There are no itemz in this list</i>
       </div>
     }
   }
