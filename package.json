@@ -4,6 +4,11 @@
   "devDependencies": {
     "lerna": "^3.10.5"
   },
+  "scripts": {
+    "build": "lerna exec --scope components -- tsc",
+    "start": "cd packages/web-main && yarn start",
+    "storybook": "cd packages/components && yarn storybook"
+  },
   "workspaces": [
     "packages/*"
   ]
