@@ -1,12 +1,12 @@
 {
   "extends": "../../config/typescript/shared_compiler_options.json",
-    "compilerOptions": {
-        "declaration": true,
-        "outDir": "./dist"
-    },
-    "include": [ "src" ],
-    "exclude": [
-        "src/**/*.stories.ts*",
-        "src/**/*.test.ts*"
-    ]
+  "include": [ "../../config/typescript/css_modules.d.ts" ],
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "./dist"
+  },
+  "exclude": [
+    "src/**/*.stories.ts*",
+    "src/**/*.test.ts*"
+  ]
 }

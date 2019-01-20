@@ -1,9 +1,6 @@
 import * as React from 'react';
 import {Component, ReactNode} from 'react';
-const styles = {
-  container: "",
-  title:"",
-}
+import styles from './styles.module.css';
 
 interface IListProps {
   children: ReactNode | ReactNode[],
@@ -25,18 +22,16 @@ export default class List extends Component<IListProps, {}> {
 
   public render(){
     if(React.Children.count(this.props.children) > 0){
-      return <div className={styles.container} >
-        {this.props.children}
+      return <div className={styles.container}>
+        <h3 className={styles.title}>{this.props.title}</h3>
+        <ListItems>{this.props.children}</ListItems>
       </div>
     }
     else {
       return <div className={styles.container}>
-        <i>There are no itemz in this list</i>
+        <h3 className={styles.title}>{this.props.title}</h3>
+        <i>There are no items in this list</i>
       </div>
     }
-    return <div className={styles.container}>
-      <h3 className={styles.title}>{this.props.title}</h3>
-      <ListItems>{this.props.children}</ListItems>
-    </div>
   }
 }
