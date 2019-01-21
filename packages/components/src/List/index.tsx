@@ -30,7 +30,7 @@ export default class List extends Component<IListProps, {}> {
     else {
       return <div className={styles.container}>
         <h3 className={styles.title}>{this.props.title}</h3>
-        <i>There are no items in this list</i>
+        <div className={styles.emptyMessage}>There are no items in this list</div>
       </div>
     }
   }

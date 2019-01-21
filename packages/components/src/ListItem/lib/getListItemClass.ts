@@ -11,7 +11,10 @@ export const itemClassFromState = (state: ListItemStates) => {
 
 const getListItemClass = (state: ListItemStates, draggableHandle: boolean = false) => {
   const itemClass = itemClassFromState(state);
-  return draggableHandle ? itemClass+ " "+ styles.listItem__with_handle : itemClass
+  if(draggableHandle){
+    return itemClass+ " "+ styles.listItem__with_handle
+  } 
+  return itemClass+ " "+ styles.listItem__without_handle
 }
 
 export default getListItemClass

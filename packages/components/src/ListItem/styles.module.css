@@ -1,5 +1,6 @@
 @value defaultBackground: aliceblue;
 @value activeHandleBackground: royalblue;
+@value handleWidth: 20px;
 
 .listItem {
   cursor: default;
@@ -18,13 +19,13 @@
 
 .listItem__dragging {
   composes: listItem;
-  background-color: lightgreen;
+  background-color: darkturquoise;
   border: 1px solid lightgrey;
 }
 
 .listItem .handle {
   cursor: grab;
-  width: 20px;
+  width: handleWidth;
   height: 20px;
   border: 1px outset midnightblue;
   background-color: cornflowerblue;
@@ -41,3 +42,6 @@
   background-color: activeHandleBackground;
 }
 
+.listItem__without_handle {
+  padding-left: calc(handleWidth + 18px);
+}

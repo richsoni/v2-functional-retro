@@ -26,4 +26,9 @@ describe('getListItemClass', () => {
     expect(getListItemClass(ListItemStates.Default, true)).toContain(styles.listItem__with_handle)
     expect(getListItemClass(ListItemStates.Default)).not.toContain(styles.listItem__with_handle)
   })
+
+  it('returns the without_handle attribute', () => {
+    expect(getListItemClass(ListItemStates.Default)).toContain(styles.listItem__without_handle)
+    expect(getListItemClass(ListItemStates.Default, true)).not.toContain(styles.listItem__without_handle)
+  })
 });
