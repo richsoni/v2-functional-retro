@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "test": "jest",
+    "test": "react-scripts test",
     "test:watch": "jest --watch",
     "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts*'",
     "del-dist": "del-cli dist",

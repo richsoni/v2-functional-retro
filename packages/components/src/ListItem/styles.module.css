@@ -1,0 +1,43 @@
+@value defaultBackground: aliceblue;
+@value activeHandleBackground: royalblue;
+
+.listItem {
+  cursor: default;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.listItem__default {
+  composes: listItem;
+  background-color: defaultBackground;
+  border: 1px solid gainsboro;
+}
+
+.listItem__dragging {
+  composes: listItem;
+  background-color: lightgreen;
+  border: 1px solid lightgrey;
+}
+
+.listItem .handle {
+  cursor: grab;
+  width: 20px;
+  height: 20px;
+  border: 1px outset midnightblue;
+  background-color: cornflowerblue;
+  border-radius: 4px;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.listItem .handle:hover, .listItem .handle:focus {
+  background-color: activeHandleBackground;
+}
+
+.listItem__dragging .handle {
+  background-color: activeHandleBackground;
+}
+
