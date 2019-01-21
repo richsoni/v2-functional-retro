@@ -8,9 +8,21 @@ interface IListItemProps {
   children: ReactNode,
   draggableHandle?: boolean,
   itemState?: ListItemStates,
+  provided?: {
+    dragHandleProps: object,
+  }
 }
 
-const Handle = () => {
+interface IHandleProps {
+  provided?: {
+    dragHandleProps: object,
+  }
+}
+
+const Handle = (props: IHandleProps) => {
+  if(props.provided){
+    return <div {...props.provided.dragHandleProps} className={styles.handle} />
+  }
   return <div className={styles.handle} />
 }
 
@@ -25,8 +37,9 @@ export default class ListItem extends Component<IListItemProps, {}> {
       children,
       draggableHandle,
       itemState,
+      provided,
     } = this.props;
-    const handle = draggableHandle ? <Handle /> : <div />;
+    const handle = draggableHandle ? <Handle provided={provided} /> : <div />;
     return <div
       className={getListItemClass(this.props.itemState, draggableHandle)}
     >
