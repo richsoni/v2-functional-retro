@@ -1,7 +1,8 @@
-import getListItemClass from './getListItemClass';
-import {itemClassFromState} from './getListItemClass';
 import {ListItemStates} from '../ListItemStates';
 import styles from '../styles.module.css';
+
+import getListItemClass from './getListItemClass';
+import {itemClassFromState} from './getListItemClass';
 
 describe('itemClassFromState', () => {
   it('returns the default if default is passed in', () => {

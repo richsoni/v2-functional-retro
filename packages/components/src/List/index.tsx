@@ -1,8 +1,9 @@
 import * as React from 'react';
 import {Component, ReactNode} from 'react';
+
 import styles from './styles.module.css';
 
-interface IListProps {
+export interface IListProps {
   children: ReactNode | ReactNode[],
   title: string
 }

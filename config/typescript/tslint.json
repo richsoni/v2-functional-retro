@@ -9,9 +9,11 @@
     "no-bitwise": true,
     "no-conditional-assignment": true,
     "no-consecutive-blank-lines": false,
-    "no-console": {
-      "severity": "warning",
-      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
-    }
-  }
+    "ordered-imports": [true,
+      {
+        "import-sources-order": "case-insensitive",
+        "grouped-imports": true
+      }
+    ],
+    "no-console":  false }
 }

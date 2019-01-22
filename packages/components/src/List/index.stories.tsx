@@ -22,13 +22,13 @@ storiesOf('List', module).add('With Simple Item', () => (
 
 storiesOf('List', module).add('With Items', () => (
   <div style={{width: '50%', marginLeft: 10}}>
-    <DragDropContext onDragEnd={() => {}}>
+    <DragDropContext onDragEnd={(x) => x + 1}>
       <List title="Long List">
-        <DraggableItem index={1} draggableId={1}>Item 1</DraggableItem>
-        <ListItem draggableHandle={true}>Item 2</ListItem>
-        <ListItem draggableHandle={true}>Item 3</ListItem>
-        <ListItem draggableHandle={true}>Item 4</ListItem>
-        <ListItem draggableHandle={true}>Item 5</ListItem>
+        <ListItem>Item 1</ListItem>
+        <ListItem>Item 1</ListItem>
+        <ListItem>Item 1</ListItem>
+        <ListItem>Item 1</ListItem>
+        <ListItem>Item 1</ListItem>
       </List>
      </DragDropContext>
   </div>));

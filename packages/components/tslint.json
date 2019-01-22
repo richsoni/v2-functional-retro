@@ -2,7 +2,7 @@
   "extends": ["../../config/typescript/tslint.json"],
   "linterOptions": {
     "exclude": [
-      "node_modules/**/*.ts"
+      "./node_modules/**/*.ts"
     ]
   }
 }
